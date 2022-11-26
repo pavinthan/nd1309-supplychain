@@ -1,4 +1,4 @@
-Ganache CLI v6.1.3 (ganache-core: 2.1.2)
+ganache v7.4.3 (@ganache/cli: 0.5.3, @ganache/core: 0.5.3)
 
 Available Accounts
 ==================
