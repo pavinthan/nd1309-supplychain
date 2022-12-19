@@ -15,15 +15,15 @@ contract FarmerRole {
     // Define a struct 'farmers' by inheriting from 'Roles' library, struct Role
     Roles.Role private farmers;
 
-    // In the constructor make the address that deploys this contract the 1st farmer
-    constructor() {
-        _addFarmer(msg.sender);
-    }
-
     // Define a modifier that checks to see if msg.sender has the appropriate role
     modifier onlyFarmer() {
         require(isFarmer(msg.sender));
         _;
+    }
+
+    // In the constructor make the address that deploys this contract the 1st farmer
+    constructor() {
+        _addFarmer(msg.sender);
     }
 
     // Define a function 'isFarmer' to check this role

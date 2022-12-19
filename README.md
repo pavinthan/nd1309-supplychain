@@ -41,10 +41,10 @@ These instructions will get you a copy of the project up and running on your loc
 Please make sure you've already installed ganache-cli, Truffle and enabled MetaMask extension in your browser.
 
 ```
-Nodejs: v16.17.0
-NPM: 8.11.0
+Nodejs: v16.17.1
+NPM: 8.19.2
 Truffle: v5.5.29 (core: 5.5.29)
-Ganache: v7.4.1 (@ganache/cli: 0.5.1, @ganache/core: 0.5.1)
+Ganache: v7.5.0 (@ganache/cli: 0.6.0, @ganache/core: 0.6.0)
 Solidity: ^0.8.16
 ```
 
@@ -75,7 +75,7 @@ ganache -m "spirit supply whale amount human item harsh scare congress discover 
 
 Your terminal should look something like this:
 
-![truffle test](images/ganache-cli.png)
+![ganache start](images/ganache_start.png)
 
 In a separate terminal window, Compile smart contracts:
 
@@ -114,6 +114,55 @@ In a separate terminal window, launch the DApp:
 ```
 npm run dev
 ```
+
+## UML diagrams
+
+### Actors
+
+1. Farmer:
+   - Harvest
+   - Process
+   - Package
+   - List for Sales
+2. Distributor:
+   - Purchase from Farmer
+   - Ships to Retailer
+3. Retailer:
+   - Sells to Consumer
+4. Consumer:
+   - Purchase from Retailer
+
+### State diagram
+
+![State diagram](images/diagram_state.png)
+
+### Activity diagram
+
+![Activity diagram](images/diagram_activity.png)
+
+### Sequence diagram
+
+![Sequence diagram](images/diagram_sequence.png)
+
+### Class diagram
+
+![Class diagram](images/diagram_class.png)
+
+## Demo
+
+### App Demo
+
+![App](images/app_demo.png)
+
+### Test Demo
+
+![Test](images/test_demo.png)
+
+### Testnet
+
+- Contract Address: `0x4B475B84092E0396ead23126f3CaaAE21eb5c765`
+- Transaction Hash: `0xe93d0fc03bf449251714fea49727db81e0a6c81615b54db3a4936d78c94eb7ae`
+- Etherscan: [https://goerli.etherscan.io/tx/0xe93d0fc03bf449251714fea49727db81e0a6c81615b54db3a4936d78c94eb7ae](https://goerli.etherscan.io/tx/0xe93d0fc03bf449251714fea49727db81e0a6c81615b54db3a4936d78c94eb7ae)
 
 ## Built With
 

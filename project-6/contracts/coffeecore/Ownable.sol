@@ -8,6 +8,12 @@ contract Ownable {
     // Define an Event
     event TransferOwnership(address indexed oldOwner, address indexed newOwner);
 
+    /// Define a function modifier 'onlyOwner'
+    modifier onlyOwner() {
+        require(isOwner());
+        _;
+    }
+
     /// Assign the contract to an owner
     constructor() {
         origOwner = msg.sender;
@@ -17,12 +23,6 @@ contract Ownable {
     /// Look up the address of the owner
     function owner() public view returns (address) {
         return origOwner;
-    }
-
-    /// Define a function modifier 'onlyOwner'
-    modifier onlyOwner() {
-        require(isOwner());
-        _;
     }
 
     /// Check if the calling address is the owner of the contract
